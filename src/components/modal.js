@@ -23,6 +23,11 @@ const Modal = ({ status, closee, product }) => {
             setCount(count + 0);
         }
     }
+
+    const Add =(count,item_name) =>{
+        console.log(count+' ของ '+ item_name);
+    }
+
     const re_counts = () => {
         setCount(count - 1);
         if (count === 0) {
@@ -35,9 +40,9 @@ const Modal = ({ status, closee, product }) => {
             <div className="modal-content">
                 <h3>รายการสินค้า</h3>
 
-                {products.map(item => {
+                {products.map((item,key) => {
                     return (
-                        <div className="modal-detail">
+                        <div className="modal-detail" key={key}>
                             <div className="modal-img">
                                 <img src={item.img} alt="" />
                             </div>
@@ -51,7 +56,7 @@ const Modal = ({ status, closee, product }) => {
                                 </div>
                                 <div className='btn-addcart'>
                                     <div className='add'>
-                                        <button >เพิ่มสินค้า</button>
+                                        <button onClick={()=> Add(count,item.name)} >เพิ่มสินค้า</button>
                                     </div>
                                     <div className='return'>
                                         <button onClick={onClose}>ย้อนกลับ</button>

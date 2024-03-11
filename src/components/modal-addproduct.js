@@ -1,7 +1,7 @@
 import './css/modal_addproduct.css'
 import { useState, useEffect} from 'react';
-
-
+import axios from 'axios';
+import Swal from 'sweetalert2';
 const ModalAddproduct =({status,close}) =>{
 
     const [getstatus, setGetstatus] = useState(status);
@@ -12,11 +12,40 @@ const ModalAddproduct =({status,close}) =>{
     const [imgsrc, setImgsrc] = useState('')
     const [errormsg, setErrormsg] = useState('')
 
+    const data = {
+        nameproduct:nameproduct,
+        detailproduct:detailproduct,
+        priceproduct:priceproduct,
+        amountproduct:amountproduct,
+        imgsrc:imgsrc,
+    }
+
+
+    const Add_product = () =>{
+        //ยิงapi
+        const formData = new FormData();
+        formData.append('Book_images',imgsrc)
+        axios.post("") .then(result=>{
+            if(result.status ===200){
+                Swal.fire({
+                    title:"เพิ่มสินค้า",
+                    icon:"success",
+                    text:"เพิ่มสินค้าทั้งหมด",
+                    confirmButtonText:"OK"
+                }).then(res =>{
+                    if(res.isConfirmed){
+                        window.location.href = "admin"
+                    }
+                })
+            }
+        })
+        
+    }
+
     const onchangeImg = (event) =>{
         const file = event.target.files[0];
         const allowedTypes = ['image/jpeg','image/png','image/gif'];
         if(!file || !allowedTypes.includes(file.type)){
-            console.log('type image not correct');
             setErrormsg('type image not correct')
             return;
         }
@@ -29,11 +58,7 @@ const ModalAddproduct =({status,close}) =>{
             
     }
 
-    const AddProduct = () =>{
-        const formData = new FormData();
-        formData.append('image',imgsrc)
-        console.log(imgsrc);
-    }
+
     
 
     useEffect(()=>{
@@ -82,7 +107,7 @@ const ModalAddproduct =({status,close}) =>{
                         {errormsg && <p style={{color:'red'}}>{errormsg}</p>}
                     </div>
                     <div className='btn-add-product'>
-                        <button className='add-pros' onClick={AddProduct}>เพิ่มสินค้า</button>
+                        <button className='add-pros' onClick={Add_product}>เพิ่มสินค้า</button>
                         <button className="back-pro" onClick={closes}>กลับ</button>
                     </div>
                 </div>

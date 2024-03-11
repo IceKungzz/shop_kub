@@ -1,16 +1,40 @@
 import Nav from "./nav-header"
 import './css/cart.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import data_cart from './mockup-cart';
 import ModalBuy from "./modal-buy";
+import axios from "axios";
 
 const Cart = () => {
 
     const [checkStatuses, setCheckStatuses] = useState(data_cart.map(() => false));
     const [status_modal, setStatus_modal] = useState(false);
     const [checkedItems, setCheckedItems] = useState([]); 
+    const [username, setUsername] = useState('')
 
+    const [status, setStatus] = useState(false)
     
+    useEffect(()=> {
+        const token = localStorage.getItem("token")
+        let config = {
+            headers:{
+                "Authorization":"Bearer "+token
+            }
+        }
+        axios.post("http://localhost:5543/auth",{},config)
+        .then(result =>{
+            setUsername(result.data.Showuser.username);
+            if(result.data.Showuser.role === 'user'){
+                setStatus(false)
+            }else{
+                setStatus(true)
+       
+            }
+    
+        })
+    },[])
+
+
     const Add = (item_id) => {
         console.log(item_id);
     }
@@ -31,17 +55,17 @@ const Cart = () => {
     }
 
     const Buy_product = () => {
-        // console.log(checkedItems);
+     
         setStatus_modal(!status_modal);
         console.log('ในfn   '+status_modal);
     }
-    // console.log('นอกfn   '+status_modal);
+   
     const onclose = () =>{
         setStatus_modal(false);
     }
     return (
         <div>
-            <Nav user='IceKungzz' />
+            <Nav user={username} role={status}/>
             <ModalBuy status={status_modal} close={onclose} product_id={checkedItems}/>
             <div className="container-cart">
                 <div className="search-cart">

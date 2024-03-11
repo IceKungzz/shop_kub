@@ -1,16 +1,27 @@
 import './css/nav.css'
 import { NavLink } from 'react-router-dom'
-// import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 const Nav = (data) =>{
+
+    const [ status, setStatus] = useState(data.role)
+    
+
+
+    useEffect(()=>{
+        setStatus(data.role)
+    },[data])
+
 
     let user = data.user
     if(!user){
         user = 'Not username'
-    }
+    }    
+    
 
     const logout = () =>{
-        console.log("Logout success");
+        localStorage.removeItem('token');
+        window.location.href = "/login"
     }
 
     return(
@@ -27,7 +38,7 @@ const Nav = (data) =>{
                     <i className="fa-solid fa-cart-shopping"></i>
                     <p>CART</p>
                 </NavLink>
-                <NavLink  to='/admin' className='menu-sub'>
+                <NavLink  to='/admin' className='menu-sub' style={{display:status ? 'flex':'none'}}>
                     <i className="fa-solid fa-user-tie"></i>    
                     <p>ADMIN</p>
                 </NavLink>
