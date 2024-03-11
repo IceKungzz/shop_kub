@@ -4,15 +4,16 @@ import { useState, useEffect } from 'react';
 
 const ModalUpdate = ({status, close, data1}) => {
     const [getstatus, setGetstatus ] = useState(status);
-    const [dataaa, setDataaa] = useState(data1);
+
     const [name, setName] = useState(data1.name);
     const [detail, setDetail] = useState(data1.detail);
     const [price, setPrice] = useState(data1.price);
     const [img, setImg] = useState(data1.img);
+    const [amount, setAmount] = useState(data1.amount)
 
     useEffect(() => {
         setGetstatus(status);
-        setDataaa(data1);
+        setAmount(data1.amount)
         setName(data1.name);
         setDetail(data1.detail);
         setPrice(data1.price);
@@ -30,6 +31,9 @@ const ModalUpdate = ({status, close, data1}) => {
     
     const handleChangePrice = (event) => {
         setPrice(event.target.value);
+    };
+    const handleChangeAmount = (event) => {
+        setAmount(event.target.value);
     };
     
 
@@ -65,7 +69,7 @@ const ModalUpdate = ({status, close, data1}) => {
                         </div>
                         <div className='detail-data'>
                             <label>จำนวน</label>
-                            <input type="text"  value='0'/>
+                            <input type="text" value={amount|| ''} onChange={handleChangeAmount}/>
                         </div>
                     </div>
                 </div>
