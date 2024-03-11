@@ -32,14 +32,28 @@
     padding: 10px;
 }
 .add-pro{
-    background-color: green;
-    color: wheat;
+    background-color: rgb(26, 177, 26);
+    color: rgb(255, 255, 255);
     margin-right: 10px;
     cursor: pointer;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .order{
     cursor: pointer;
+    width: 30%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(28, 128, 215);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
 }
 
 

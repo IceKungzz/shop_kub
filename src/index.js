@@ -12,6 +12,7 @@ import Login from './components/login'
 import Register from './components/register';
 import Home from './components/home';
 import ModalAddproduct from './components/modal-addproduct';
+import Listorder from './components/list-order';
 
 
 
@@ -28,6 +29,7 @@ root.render(
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/modal" element={<ModalAddproduct />} />
+              <Route path="/orderlist" element={<Listorder />} />
 
         </Routes>
     

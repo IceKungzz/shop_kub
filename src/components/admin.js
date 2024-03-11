@@ -4,6 +4,7 @@ import data from './mockup';
 import { useState} from 'react';
 import ModalAddproduct from "./modal-addproduct";
 import ModalUpdate from "./modal_update";
+import { NavLink } from "react-router-dom";
 
 const Admin = () =>{
 
@@ -37,7 +38,7 @@ const Admin = () =>{
                         <h3>รายการสินค้าทั้งหมด</h3>
                         <div className="admin-btn">
                                 <button className="add-pro" onClick={open}>เพิ่มสินค้า</button>
-                                <button className="order">รายการสั่งซื้อ</button>
+                                <NavLink to='/orderlist' className="order">รายการสั่งซื้อ</NavLink>
                         </div>
                 </div>
 
