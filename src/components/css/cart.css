@@ -1,0 +1,173 @@
+
+
+.container-cart{
+    width: 80%;
+    height: 90vh;
+    margin-left: 10%;
+    padding: 20px;
+    overflow: auto;
+
+
+}
+.search-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(211, 210, 210);
+    margin-bottom: 15px;
+}
+.search-input{
+    display: flex;
+}
+.search-cart  input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+}
+.search-cart  input:focus{
+    outline: none;
+    border: 1px solid black;
+}
+.search-cart  i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    cursor: pointer;  
+    font-size: 20px;
+}
+.search-cart  i:hover{
+    color: rgb(26, 26, 26);
+}
+.order-detail{
+
+    width: 100%;
+}
+.order-sub{
+    border: 1px solid rgb(206, 206, 206);
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.order-sub-left{
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.img-detail-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 60%;
+    height: 100%;
+}
+.order-sub-left input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.img-detail-order img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+}
+.order-sub-right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.price-order{
+    margin-left: 10px;
+    width: 20%;
+}
+.update-order{
+
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
+.update-order input{
+    width: 40px;
+    height: 30px;
+    padding: 12px;
+    border: none;
+}
+.del{
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 0px 20px;
+    margin-right: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.addd{
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 0px 20px;
+    margin-left: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn-order{
+    display: flex;
+    width: 30%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-order button{
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+footer{
+    border: 1px solid rgb(182, 181, 181);
+    width: 77%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
+.detail-left{
+
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.detail-left input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.detail-rigth{
+
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detail-rigth button{
+    width: 50%;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor:pointer
+}

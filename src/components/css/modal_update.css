@@ -1,0 +1,105 @@
+.container-update{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-update{
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.detail-update{
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 60%;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+
+}
+.detail-update h2{
+    margin-bottom: 10px;
+}
+.input-up{
+  
+    display: flex;
+    flex-direction: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
+}
+.detail-img-left{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+.detail-img-left img{
+    width: 300px;
+    height: 280px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.detail-data-right{
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.detail-data{
+
+    padding: 10px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.detail-data input{
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+.btn-up{
+
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+}
+.btn-update{
+    background-color: chartreuse;
+    padding: 10px;
+    width: 10%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.btn-back{
+    background-color: red;
+    padding: 10px;
+    width: 10%;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}

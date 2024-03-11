@@ -1,0 +1,107 @@
+.container-modal{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.bg{
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+}
+.modal-content{
+    background-color: rgb(238, 247, 255);
+    width: 60%;
+    height: 50vh;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: auto;
+    border: 1px solid black;
+
+}
+.modal-content h3{
+    text-align: center;
+    margin-top: 10px;
+}
+.modal-detail{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+.modal-img img{
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.modal-detail-sub{
+    width: 50%;
+    padding: 20px;
+    overflow: auto;
+    height: 40vh;
+}
+.modal-detail-sub h4{
+    margin-bottom: 10px;
+}
+.modal-btn-detail{
+
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.modal-btn-detail button{
+    margin: 0px 20px;
+    width: 20%;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid green;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn-addcart{
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.add button{
+    background-color: rgb(0, 123, 245);
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.return button{
+    background-color: rgb(149, 152, 155);
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.return button:hover{
+    background-color: rgb(76, 78, 79);
+}
+.add button:hover{
+    background-color: rgb(6, 90, 174);
+}
+
