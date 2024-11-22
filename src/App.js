@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload ICE kub.
+          Edit <code>srcCC/App.js</code> and save to reload ICE kub.
         </p>
         <a
           className="App-link"
